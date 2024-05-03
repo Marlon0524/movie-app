@@ -95,9 +95,9 @@ class MoviesServiceTest {
         when(moviesRepository.findMoviesByFilters(anyInt(), anyInt(), anyInt())).thenReturn(expectedMoviesList);
 
         // Act
-        List<Movies> resultBooksList = moviesService.filterMovies(1, 2, 120);
+        List<Movies> resultMoviesList = moviesService.filterMovies(1, 2, 120);
 
         // Assert
-        assertEquals(expectedMoviesList, resultBooksList);
+        assertEquals(expectedMoviesList, resultMoviesList);
     }
 }
